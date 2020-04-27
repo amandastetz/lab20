@@ -17,15 +17,7 @@ let depict (img : image) : unit =
         let lvl = int_of_float (255. *. (1. -. v)) in 
         Graphics.set_color (Graphics.rgb lvl lvl lvl);
         plot c (y - r) in
-      vanessa-hu
-        List.iteri (fun r row -> List.iteri (fun c pix -> depict_pix pix r c) row) img;
-      
-        for i = 1 to y do
-          for j = 1 to x do
-            depict_pix List.nth i img y x
-          done
-        done
-
+        List.iteri (fun r row -> List.iteri (fun c pix -> depict_pix pix r c) row) img;    
       Unix.sleep 2; 
   Graphics.close_graph () ;;
 
