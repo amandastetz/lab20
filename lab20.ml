@@ -1,5 +1,6 @@
 
 open Graphics ;;
+(*TEST*)
 
 (* images are lists of lists of floats between 0. (white) and 1. (black) *)
 type image = float list list ;;
